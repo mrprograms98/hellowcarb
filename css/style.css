@@ -769,6 +769,7 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    z-index: 1000;
   }    
   .nav-menu.active {
     max-height: 300px; /* Voldoende hoogte om menu te tonen */
@@ -800,4 +801,5 @@ footer {
     direction: ltr;
   }
 }
+
 
