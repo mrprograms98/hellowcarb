@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // WhatsApp button
   whatsappBtn?.addEventListener('click', () => {
-    window.open('https://wa.me/31622341519', '_blank', 'noopener');
+    window.open('https://wa.me/31643037004', '_blank', 'noopener');
   });
 
   // Plan button scroll to contact
