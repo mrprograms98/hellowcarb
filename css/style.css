@@ -1,6 +1,5 @@
 :root{
   /* Primary brand colors */
-  --green-primary: #1f7a4a;      /* luxe donkergroen */
   --green-accent: #3fa874;       /* accent / hover */
   --green-soft: #e8f3ee;         /* lichte achtergrond */
 
@@ -12,6 +11,8 @@
   /* UI */
   --text-dark: #1a1a1a;
   --text-light: #f5f5f5;
+  
+  --apple-green: #8CC63F; 
 }
 
 html {
@@ -27,6 +28,26 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--apple-green);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--apple-green);
+}
+
+h3 {
+  color: var(--apple-green);
+}
+
+p,
+li {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.7;
 }
 
 .preloader {
@@ -47,6 +68,7 @@ body {
   z-index: 999999;
   opacity: 1;
   transition: opacity 0.8s ease;
+  pointer-events: all;
 }
 
 /* Langzamere pulse animatie */
@@ -65,6 +87,7 @@ body {
 /* Fade-out langzamer en zachter */
 .preloader.fade-out {
   opacity: 0;
+  pointer-events: none;  
   transition: opacity 2.2s ease; /* was 1s → nu 2.2s */
 }
 
@@ -93,9 +116,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(0, 0, 0, 0.4) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
   color: var(--white);
   padding: 10px 20px;
+    position: relative;
+  z-index: 10001;
 }
 
 .logo {
@@ -119,12 +150,18 @@ body {
 }
 
 .nav-menu ul li a:hover {
-  color: var(--green-accent);
+  color: var(--apple-green);
 }
 
 .hamburger {
   display: none;
   cursor: pointer;
+
+  position: fixed;          /* 🔥 BELANGRIJK */
+  top: 18px;
+  right: 20px;
+  pointer-events: auto;
+  z-index: 10002; 
 }
 
 .bar {
@@ -151,10 +188,22 @@ body {
 .nav-menu.active {
   display: block !important;
 }
+.ticket-koop {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+.button1 {background-color: var(--apple-green);} /* Green */
 .hero {
   min-height: 100vh;
-  background: var(--green-soft);
+  background: var(--apple-green);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,13 +258,12 @@ body {
 /* Ghost variant */
 .button.ghost {
   background: transparent;
-  border: 2px solid var(--green-accent);
-  color: var(--green-accent);
+  color: var(--apple-green);
   box-shadow: none;
 }
 
 .button.ghost:hover {
-  background: var(--green-accent);
+  background: var(--apple-green);
   color: var(--white);
 }
 .float-shape {
@@ -224,23 +272,33 @@ body {
   height: 180px;
   background: radial-gradient(
     circle,
-    var(--green-accent),
+    var(--apple-green), /* Intense groene kleur */
     transparent
   );
-  opacity: 0.15;
+  opacity: 0.3; /* Een lagere opacity om het visueel te versterken */
   border-radius: 50%;
-  animation: float 12s infinite ease-in-out;
+  animation: float 8s infinite ease-in-out; /* Snellere animatie */
   z-index: 0;
 }
 
 .float-1 {
-  top: 10%;
-  left: -60px;
+  top: 5%; /* Verplaats de ronde vorm dichter naar de bovenkant */
+  left: -30px; /* Verplaats het naar de linkerkant */
 }
 
 .float-2 {
-  bottom: 15%;
-  right: -60px;
+  bottom: 10%;
+  right: -30px;
+  animation-delay: 4s;
+}
+.float-3 {
+  top: 30%; /* Verplaats de ronde vorm dichter naar de bovenkant */
+  left: -40px; /* Verplaats het naar de linkerkant */
+}
+
+.float-3 {
+  bottom: 50%;
+  right: -50px;
   animation-delay: 4s;
 }
 
@@ -262,21 +320,8 @@ main {
 
 main .button,
 .partner-btn {
-  background: linear-gradient(
-    135deg,
-    var(--green-primary),
-    var(--green-accent)
-  );
+  background:var(--apple-green);
   color: var(--white);
-}
-
-main .button:hover,
-.partner-btn:hover {
-  background: linear-gradient(
-    135deg,
-    var(--green-accent),
-    var(--green-primary)
-  );
 }
 
 .partner-buttons {
@@ -325,11 +370,7 @@ main .button:hover,
 }
 
     .contact-form {
-        background: linear-gradient(
-    135deg,
-    #0f0f0f,
-    #1c1c1c
-  );
+    background: black;
   color: var(--white);
       padding: 40px;
       border-radius: 10px;
@@ -365,7 +406,7 @@ main .button:hover,
       min-height: 150px;
     }
     .contact-form input[type="submit"] {
-      background-color: var(--green-primary);
+      background-color: var(--apple-green);
       color: white;
       width: auto;              
       padding: 12px 36px;
@@ -378,7 +419,7 @@ main .button:hover,
       display: block;
     }
     .contact-form input[type="submit"]:hover {
-      background-color: var(--green-accent);
+      background-color: var(--apple-green);
     }
     .contact-form input:focus, .contact-form textarea:focus {
       outline: none;
@@ -386,7 +427,7 @@ main .button:hover,
     }
     .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--green-accent);
+  border-color: var(--apple-green);
 }
 
 .hr-wizard {
@@ -415,11 +456,7 @@ main .button:hover,
   left: 0;
   height: 6px;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--green-primary),
-    var(--green-accent)
-  );}
+  background: var(--apple-green);}
 
 .hr-card:hover {
   transform: translateY(-8px);
@@ -508,7 +545,7 @@ section:nth-of-type(4) { animation-delay: .3s; }
 section h2 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: var(--green-primary);
+  color: var(--apple-green);
 }
 
 section p {
@@ -538,62 +575,19 @@ section ul li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--green-accent);
+  color: var(--apple-green);
   font-weight: bold;
 }
 
-/* ===== Intro sectie (hero-achtig maar rustiger) ===== */
-
-#intro {
-  background: linear-gradient(
-    135deg,
-    var(--green-primary),
-    var(--green-accent)
-  );
-  color: var(--text-light);
+.basic-section {
+  background: black;
+  border-left: 8px solid var(--apple-green);
+  color: white;
   text-align: center;
 }
 
-#intro h1 {
-  font-size: 3rem;
-  margin-bottom: 25px;
-  color: var(--white);
-}
-
-#intro p {
-  color: var(--text-light);
-  font-size: 1.1rem;
-}
-
-/* ===== Informatieve blokken ===== */
-
-#koolhydraatarm,
-#weekmenus,
-#recepten,
-#videos,
-#doelgroep {
-  background: var(--white);
-}
-
-/* Zachte afwisseling in achtergrond */
-#weekmenus,
-#videos {
-  background: var(--green-soft);
-}
-
-/* ===== Challenge highlight ===== */
-
-#challenge {
-  background: linear-gradient(
-    135deg,
-    #f7f5ef,
-    #ffffff
-  );
-  border-left: 8px solid var(--green-primary);
-}
-
-#challenge strong {
-  color: var(--green-primary);
+.basic-section strong {
+  color: var(--apple-green);
 }
 
 /* ===== Socials ===== */
@@ -617,14 +611,11 @@ section ul li::before {
   display: inline-block;
   padding: 12px 26px;
   border-radius: 40px;
-  background: linear-gradient(
-    135deg,
-    var(--green-primary),
-    var(--green-accent)
-  );
+  background: var(--apple-green);
   color: var(--white);
   font-weight: 500;
   transition: transform .25s ease, box-shadow .25s ease;
+  text-decoration: none;
 }
 
 #socials a:hover {
@@ -637,18 +628,25 @@ section ul li::before {
 footer p {
   opacity: 0.8;
   font-size: 0.95rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* ===== Responsive aanpassingen ===== */
 
 @media (max-width: 768px) {
+
+  .nav-menu {
+    display: none;
+  }
   section {
-    padding: 40px 22px;
-    margin: 40px auto;
+    padding: 28px 18px;
+    margin: 24px auto;
+    border-radius: 14px;
   }
 
-  #intro h1 {
-    font-size: 2.2rem;
+  .basic-section {
+    border-left-width: 4px;
   }
 
   section h2 {
@@ -658,6 +656,20 @@ footer p {
   section p {
     font-size: 1rem;
   }
+  .hero-wrapper {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .basic-section:first-of-type {
+    margin-top: 40px;
+  }
+  .fact-section ul {
+    grid-template-columns: 1fr;
+  }
+  .fact-section h2 {
+    font-size: 1.8rem;
+  }
 }
 
 footer {
@@ -665,22 +677,27 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: black;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.75) 65%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
   color: var(--white);  padding: 40px 0 20px;
   font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
 }
 .footer-col a {
   display: inline-block;
   margin-top: 8px;
   padding: 8px 18px;
   border-radius: 30px;
-  background: linear-gradient(
-    135deg,
-    var(--green-primary),
-    var(--green-accent)
-  );
+  background: var(--apple-green);
   color: white;
   font-size: 0.9rem;
+  list-style-type: none;
 }
 
 /* Container die alles centreert */
@@ -724,15 +741,15 @@ footer {
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
   padding-top: 15px;
   font-size: 14px;
 }
 
 .whatsapp-btn{position:fixed;right:20px;bottom:20px;  background: linear-gradient(
     180deg,
-    var(--green-accent),
-    var(--green-primary)
+    #2AB540,
+    var(--apple-green)
   );
   box-shadow: 0 14px 40px rgba(31,122,74,0.35);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-index:90;transition:transform .18s; border:none; outline: none; }
 .whatsapp-btn:hover{transform:translateY(-6px);}
@@ -741,6 +758,24 @@ footer {
 @media (max-width: 480px) {
   .hamburger .bar {
     width: 22px;
+  }
+  .menu-links a {
+    font-size: 22px;
+  }
+
+  .menu-logo {
+    width: 140px;
+    margin-bottom: 30px;
+  }
+
+  .menu-langs a img {
+    width: 22px;
+  }
+  .ticket-koop,
+  .button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
   }
 }
 
@@ -751,6 +786,13 @@ footer {
 
   .hr-card h2 {
     font-size: 1.4rem;
+  }
+  .footer-container {
+    gap: 24px;
+  }
+
+  .footer-col h3 {
+    margin-bottom: 8px;
   }
 }
 
@@ -801,6 +843,230 @@ footer {
     direction: ltr;
   }
 }
+@media (hover: none) {
+  a:hover,
+  button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ===== Fullscreen hamburger menu ===== */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.menu-content {
+  text-align: center;
+  color: white;
+}
+
+.menu-logo {
+  width: 180px;
+  margin-bottom: 50px;
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.menu-links li {
+  margin: 20px 0;
+}
+
+.menu-links a {
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.menu-links a:hover {
+  color: var(--apple-green);
+}
+
+.menu-langs a {
+  margin: 0 15px;
+  font-size: 18px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.menu-langs a:hover {
+  color: var(--apple-green);
+}
+
+.hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://www.consultancy.nl/illustrations/news/detail/2023-04-05-023937472-Afschaffen_btw_op_groente_en_fruit_om_meerdere_redenen_niet_haalbaar.jpg"); /* jouw afbeelding */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.55) 40%,
+    rgba(0,0,0,0.35) 70%,
+    rgba(0,0,0,0.6) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+.header,
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
+.header {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0)
+  );
+}
+.hero-section {
+  background: transparent; /* belangrijk */
+  color: white;
+  padding: 120px 40px 80px;
+  margin: 0 auto;
+  box-shadow: none;
+  border-left: none;
+}
+.menu-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+}
+/* ===== Follow hint animatie ===== */
+
+.follow-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 6px;
+}
+
+.follow-text {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+
+.arrow {
+  font-size: 40px;
+  color: var(--apple-green);
+  animation: bounceArrow 1.8s infinite ease-in-out;
+}
+
+/* Subtiele bounce animatie */
+@keyframes bounceArrow {
+  0%   { transform: translateY(0); opacity: 0.4; }
+  50%  { transform: translateY(8px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.4; }
+}
+.footer-col:hover .arrow {
+  animation-play-state: paused;
+}
+.fact-section {
+  background: black;
+  border-left: 8px solid var(--apple-green);
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+}
+
+.fact-section h2 {
+  color: var(--apple-green);
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.fact-section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.fact-section li {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fact-section li:hover {
+  transform: translateY(-8px);
+}
+
+.fact-icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.fact-section p {
+  font-size: 1.05rem;
+  color: #555;
+}
+@keyframes sectionIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fact-section {
+  animation: sectionIn 1s ease forwards;
+}
+
+.fact-section li {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.fact-section li:nth-child(1) { animation-delay: 0.2s; }
+.fact-section li:nth-child(2) { animation-delay: 0.4s; }
+.fact-section li:nth-child(3) { animation-delay: 0.6s; }
 
 
 
