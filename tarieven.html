@@ -9,18 +9,41 @@
 </head>
 
 <body>
+<!-- Fullscreen menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <button class="menu-close">✕</button>
 
+    <img src="img/logo.png" alt="Hellowcarb logo" class="menu-logo">
+
+    <ul class="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diensten.html">Diensten</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-langs">
+      <a href="#" data-lang="nl">NL <img src="https://flagcdn.com/nl.svg" width="30" alt="NL"></a>
+      <a href="#" data-lang="en">EN <img src="https://flagcdn.com/gb.svg" width="30" alt="EN"></a>
+    </div>
+
+  </div>
+</div>
   <!-- Preloader -->
   <div class="preloader">
     <div class="preloader-content">
       <img src="img/logo.png" height="80" alt="logo">
-      <h2 class="welcome-title">bekijk het kostenplaatje</h2>
+      <h2 class="welcome-title">Welkom</h2>
     </div>
   </div>
 
   <!-- Decorative shapes -->
   <div class="float-shape float-1" aria-hidden="true"></div>
   <div class="float-shape float-2" aria-hidden="true"></div>
+  <div class="float-shape float-3" aria-hidden="true"></div>
+  <div class="float-shape float-4" aria-hidden="true"></div>
+
+<div class="hero-wrapper">
 
   <!-- Header -->
   <header class="header">
@@ -32,7 +55,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="diensten.html" data-key="nav_about">diensten</a></li>
-        <li><a href="tarieven.html" data-key="nav_method">tarieven</a></li>
+        <!--<li><a href="tarieven.html" data-key="nav_method">tarieven</a></li>-->
         <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
 
         <li class="lang-btn" data-lang="nl">
@@ -52,6 +75,23 @@
     </div>
   </header>
 
+  <!-- Intro / Header -->
+  <section class="basic-section">
+    <h1>Welkom bij Hellowcarb</h1>
+    <p>
+      Hellowcarb is een initiatief van <strong>Linda Wener</strong>.  
+      Met Hellowcarb help ik mensen op een duurzame manier afvallen door middel van
+      koolhydraatarm eten.
+    </p>
+    <p>
+      Hellowcarb is momenteel nog niet ingeschreven bij de Kamer van Koophandel en zal
+      in de toekomst worden ondergebracht onder mijn BV.
+    </p>
+    <p><button class="ticket-koop button1">klik hier voor deelname aan de chalenge</button></p>
+  </section>
+
+</div>
+
 <section class="hero">
   <div class="hero-overlay"></div>
 
@@ -65,20 +105,6 @@
     </div>
   </div>
 </section>
-
-  <!-- Intro / Header -->
-  <section id="intro">
-    <h1>Welkom bij Hellowcarb</h1>
-    <p>
-      Hellowcarb is een initiatief van <strong>Linda Wener</strong>.  
-      Met Hellowcarb help ik mensen op een duurzame manier afvallen door middel van
-      koolhydraatarm eten.
-    </p>
-    <p>
-      Hellowcarb is momenteel nog niet ingeschreven bij de Kamer van Koophandel en zal
-      in de toekomst worden ondergebracht onder mijn BV.
-    </p>
-  </section>
 
 <section class="hero">
   <div class="hero-overlay"></div>
@@ -107,14 +133,20 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="diensten.html" data-key="nav_about">diensten</a></li>
-              <li><a href="tarieven.html" data-key="nav_method">tarieven</a></li>
+              <!--<li><a href="tarieven.html" data-key="nav_method">tarieven</a></li>-->
               <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h3>Volg ons</h3>
-            <a href="">linkedin</a>
+        <div class="follow-hint">
+          <span class="follow-text">Volg je ons al?</span>
+          <span class="arrow">↓</span>
+        </div>
+            <a href="">facebook</a>
+            <a href="">instagram</a>
+            <a href="">Tiktok</a>
         </div>
 
     </div>
