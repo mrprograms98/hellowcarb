@@ -9,7 +9,26 @@
 </head>
 
 <body>
+<!-- Fullscreen menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-content">
+    <button class="menu-close">✕</button>
 
+    <img src="img/logo.png" alt="Hellowcarb logo" class="menu-logo">
+
+    <ul class="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diensten.html">Diensten</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-langs">
+      <a href="#" data-lang="nl">NL <img src="https://flagcdn.com/nl.svg" width="30" alt="NL"></a>
+      <a href="#" data-lang="en">EN <img src="https://flagcdn.com/gb.svg" width="30" alt="EN"></a>
+    </div>
+
+  </div>
+</div>
   <!-- Preloader -->
   <div class="preloader">
     <div class="preloader-content">
@@ -21,6 +40,10 @@
   <!-- Decorative shapes -->
   <div class="float-shape float-1" aria-hidden="true"></div>
   <div class="float-shape float-2" aria-hidden="true"></div>
+  <div class="float-shape float-3" aria-hidden="true"></div>
+  <div class="float-shape float-4" aria-hidden="true"></div>
+
+<div class="hero-wrapper">
 
   <!-- Header -->
   <header class="header">
@@ -53,7 +76,7 @@
   </header>
 
   <!-- Intro / Header -->
-  <section id="intro">
+  <section class="basic-section">
     <h1>Welkom bij Hellowcarb</h1>
     <p>
       Hellowcarb is een initiatief van <strong>Linda Wener</strong>.  
@@ -64,26 +87,15 @@
       Hellowcarb is momenteel nog niet ingeschreven bij de Kamer van Koophandel en zal
       in de toekomst worden ondergebracht onder mijn BV.
     </p>
+    <p><button class="ticket-koop button1">klik hier voor deelname aan de chalenge</button></p>
   </section>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>Gezond leven zonder concessies</h1>
-    <p>Ontdek low-carb voeding, lifestyle tips en inspirerende vlogs.</p>
-
-    <div class="hero-buttons">
-      <a href="diensten.html" class="button">Ontdek Hellowcarb</a>
-      <a href="contact.html" class="button ghost">Samenwerken</a>
-    </div>
-  </div>
-</section>
+</div>
 
 <main>
 
   <!-- Wat is koolhydraatarm -->
-  <section id="koolhydraatarm">
+  <section class="basic-section">
     <h2>Wat is koolhydraatarm eten?</h2>
     <p>
       Koolhydraatarm eten betekent dat je minder snelle koolhydraten eet, zoals suiker,
@@ -103,7 +115,7 @@
   </section>
 
   <!-- Weekmenu's -->
-  <section id="weekmenus">
+  <section class="basic-section">
     <h2>Weekmenu’s</h2>
     <p>
       Op deze website vind je overzichtelijke koolhydraatarme weekmenu’s die je helpen
@@ -121,7 +133,7 @@
   </section>
 
   <!-- Recepten -->
-  <section id="recepten">
+  <section class="basic-section">
     <h2>Recepten</h2>
     <p>
       Hellowcarb biedt een groeiende verzameling koolhydraatarme recepten die makkelijk
@@ -131,7 +143,7 @@
   </section>
 
   <!-- Receptvideo's -->
-  <section id="videos">
+  <section class="basic-section">
     <h2>Receptvideo’s</h2>
     <p>
       Naast geschreven recepten deel ik ook receptvideo’s waarin je stap voor stap kunt
@@ -141,7 +153,7 @@
   </section>
 
   <!-- Challenge -->
-  <section id="challenge">
+  <section class="basic-section">
     <h2>Koolhydraatarm Challenge</h2>
     <p>
       Van <strong>12 januari tot en met 2 februari</strong> organiseer ik een
@@ -154,7 +166,7 @@
   </section>
 
   <!-- Doelgroep -->
-  <section id="doelgroep">
+  <section class="basic-section">
     <h2>Voor wie is Hellowcarb?</h2>
     <p>
       Hellowcarb is bedoeld voor mensen die:
@@ -190,7 +202,13 @@
 
         <div class="footer-col">
             <h3>Volg ons</h3>
-            <a href="">linkedin</a>
+        <div class="follow-hint">
+          <span class="follow-text">Volg je ons al?</span>
+          <span class="arrow">↓</span>
+        </div>
+            <a href="">facebook</a>
+            <a href="">instagram</a>
+            <a href="">Tiktok</a>
         </div>
 
     </div>
@@ -213,4 +231,3 @@
 
 </body>
 </html>
-
