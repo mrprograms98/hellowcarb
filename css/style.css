@@ -198,6 +198,13 @@ li {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  animation: softPulse 3.5s infinite;
+}
+
+@keyframes softPulse {
+  0% { box-shadow: 0 0 0 0 rgba(140,198,63,0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(140,198,63,0); }
+  100% { box-shadow: 0 0 0 0 rgba(140,198,63,0); }
 }
 
 .button1 {background-color: var(--apple-green);} /* Green */
@@ -266,6 +273,18 @@ li {
   background: var(--apple-green);
   color: var(--white);
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .float-shape {
   position: fixed;
   width: 180px;
@@ -622,6 +641,79 @@ section ul li::before {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(31,122,74,0.35);
 }
+/* ===== Social icons footer ===== */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--apple-green);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+}
+
+/* Hover animatie (rustig & gezond) */
+.social:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(31,122,74,0.45);
+}
+
+/* Instagram gradient */
+.social.instagram {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+/* TikTok donker maar stijlvol */
+.social.tiktok {
+  background: linear-gradient(
+    135deg,
+    #000,
+    #111
+  );
+}
+
+/* Facebook iets rustiger blauw */
+.social.facebook {
+  background: linear-gradient(
+    135deg,
+    #1877f2,
+    #145dbf
+  );
+}
+
+/* Mobiel */
+@media (max-width: 480px) {
+  .social {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 /* ===== Footer tekst (inhoudelijk) ===== */
 
@@ -635,7 +727,6 @@ footer p {
 /* ===== Responsive aanpassingen ===== */
 
 @media (max-width: 768px) {
-
   .nav-menu {
     display: none;
   }
@@ -670,6 +761,11 @@ footer p {
   .fact-section h2 {
     font-size: 1.8rem;
   }
+  .float-shape {
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+  }
 }
 
 footer {
@@ -698,8 +794,11 @@ footer {
   color: white;
   font-size: 0.9rem;
   list-style-type: none;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
-
+.footer-col a:hover {
+  transform: translateY(-3px);
+}
 /* Container die alles centreert */
 .footer-container {
   max-width: 1200px;
@@ -780,6 +879,18 @@ footer {
 }
 
 @media (max-width: 600px) {
+  section {
+    padding: 24px 16px;
+    margin: 20px auto;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
   .hr-card {
     padding: 30px 22px;
   }
@@ -797,6 +908,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .hero-wrapper {
+    min-height: 80vh;
+    background-position: center top;
+  }
   .hamburger {
     display: block; /* Toon de hamburgerknop */
   }
@@ -1038,8 +1153,11 @@ footer {
   width: 50px;
   height: 50px;
   margin-bottom: 15px;
+  transition: transform 0.4s ease;
 }
-
+.fact-section li:hover .fact-icon img {
+  transform: scale(1.15) rotate(-3deg);
+}
 .fact-section p {
   font-size: 1.05rem;
   color: #555;
@@ -1067,6 +1185,3 @@ footer {
 .fact-section li:nth-child(1) { animation-delay: 0.2s; }
 .fact-section li:nth-child(2) { animation-delay: 0.4s; }
 .fact-section li:nth-child(3) { animation-delay: 0.6s; }
-
-
-
