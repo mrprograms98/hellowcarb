@@ -646,17 +646,15 @@ section ul li::before {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: flex;
-  place-items: center;
   background: var(--apple-green);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
   display: grid;
   place-items: center;
-  align-items: center;
-  justify-content: center;
+
   overflow: hidden;
-  margin-top: 50px; /* verhoog de marge */
-  transform: translateY(10px); /* of zelfs groter als nodig */
+  margin-top: 50px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .social svg {
