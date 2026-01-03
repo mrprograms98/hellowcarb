@@ -35,6 +35,11 @@ body {
   padding: 0;
   margin: 0;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 h1 {
   font-size: clamp(1.8rem, 5vw, 3rem);
@@ -539,6 +544,7 @@ section {
   opacity: 0;
   transform: translateY(40px);
   animation: sectionIn .9s ease forwards;
+  box-sizing: border-box;
 }
 
 section:nth-of-type(2) { animation-delay: .1s; }
@@ -780,6 +786,15 @@ footer p {
     height: 100px;
     opacity: 0.2;
   }
+  section {
+    padding: 0.5rem;
+  }
+
+  /* Extra aanpassingen voor tekst of knoppen */
+  /* Bijvoorbeeld: */
+  h1 {
+    font-size: 1.5rem;
+  }
 
 }
 
@@ -808,11 +823,17 @@ footer {
   background: var(--apple-green);
   color: white;
   font-size: 0.9rem;
-  list-style-type: none;
-  transition: transform 0.25s ease, background 0.25s ease;
+ list-style: none; 
+text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
+
+
 .footer-col a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
 }
 /* Container die alles centreert */
 .footer-container {
@@ -831,13 +852,14 @@ footer {
 }
 
 .footer-column ul {
-  list-style: none;
+  list-style: none !important;
   padding: 0;
   margin: 0;
 }
 
 .footer-column ul li {
   margin-bottom: 10px;
+list-style: none !important; 
 }
 
 .footer-column a {
@@ -897,6 +919,11 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
     .social {
     width: 44px;
     height: 44px;
+  }
+
+  .social svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1185,4 +1212,30 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
     transition: none !important;
   }
 }
+.footer-column ul li::before,
+.footer-column ul li::after,
+section ul li::before,
+section ul li::after {
+  display: none !important;
+}
+/* Verwijder pseudo-elementen die mogelijk puntjes toevoegen */
+.footer-column ul li::before,
+.section ul li::before {
+  display: none !important;
+}
 
+* Container met vaste breedte aanpassen */
+.container {
+  width: 100%;
+  max-width: 1200px; /* of je maximale breedte */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flexbox voor layout, indien nodig */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
