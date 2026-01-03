@@ -650,7 +650,8 @@ section ul li::before {
   place-items: center;
   background: var(--apple-green);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
+  display: grid;
+  place-items: center;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -659,8 +660,8 @@ section ul li::before {
 }
 
 .social svg {
-  width: 22px;   /* 🔥 kleiner dan de cirkel */
-  height: 22px;
+  width: 55%;
+  height: 55%;
   fill: white;
   display: block;
 }
