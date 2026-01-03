@@ -898,11 +898,6 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
     width: 44px;
     height: 44px;
   }
-
-  .social svg {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1190,3 +1185,4 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
     transition: none !important;
   }
 }
+
