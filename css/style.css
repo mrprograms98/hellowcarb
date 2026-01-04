@@ -789,7 +789,18 @@ footer p {
     height: 100px;
     opacity: 0.2;
   }
-
+  .social.tiktok,
+  .social.instagram,
+  .social.facebook {
+    width: 60px;
+    height: 60px;
+  }
+  .social.tiktok svg,
+  .social.instagram svg,
+  .social.facebook svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 footer {
@@ -1220,6 +1231,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
