@@ -540,6 +540,7 @@ section {
   transform: translateY(40px);
   animation: sectionIn .9s ease forwards;
   box-sizing: border-box;
+
 }
 
 section:nth-of-type(2) { animation-delay: .1s; }
@@ -780,15 +781,6 @@ footer p {
     width: 100px;
     height: 100px;
     opacity: 0.2;
-  }
-  section {
-    padding: 0.5rem;
-  }
-
-  /* Extra aanpassingen voor tekst of knoppen */
-  /* Bijvoorbeeld: */
-  h1 {
-    font-size: 1.5rem;
   }
 
 }
@@ -1218,20 +1210,3 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
-
-* Container met vaste breedte aanpassen */
-.container {
-  width: 100%;
-  max-width: 1200px; /* of je maximale breedte */
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Flexbox voor layout, indien nodig */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
