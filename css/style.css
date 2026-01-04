@@ -17,14 +17,17 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-html {
-  height: 100%;
+html, body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+html {
+  height: 100%;
   font-size: clamp(15px, 1vw, 17px);
   scroll-behavior: smooth;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 body {
@@ -32,8 +35,6 @@ body {
   flex-direction: column;
   justify-content: flex-start; /* BELANGRIJK */
   height: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 h1 {
@@ -835,6 +836,7 @@ text-decoration: none;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   padding: 0 20px;
+  width: 100%;
 }
 
 /* Kolommen */
@@ -1215,5 +1217,6 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
