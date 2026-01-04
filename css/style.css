@@ -292,7 +292,7 @@ li {
   opacity: 1;
   transform: translateY(0);
 }
-/*
+
 .float-shape {
   position: absolute;
   width: clamp(100px, 18vw, 180px);
@@ -310,17 +310,16 @@ li {
   overflow: hidden;
 }
 
-.float-1 { top: 8%; left: -60px; }
-.float-2 { bottom: 12%; right: -60px; animation-delay: 3s; }
-.float-3 { top: 45%; right: -80px; animation-delay: 6s; }
-.float-4 { bottom: 35%; left: -70px; animation-delay: 9s; }
+.float-1 { top: 8%; left: 60px; }
+.float-2 { bottom: 12%; right: 60px; animation-delay: 3s; }
+.float-3 { top: 45%; right: 80px; animation-delay: 6s; }
+.float-4 { bottom: 35%; left: 70px; animation-delay: 9s; }
 
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-40px); }
   100% { transform: translateY(0); }
 }
-*/
 
 main {
   display: flex;
@@ -1232,5 +1231,6 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
