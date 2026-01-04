@@ -807,6 +807,8 @@ footer {
   font-family: sans-serif;
   text-align: center;
   text-decoration: none;
+    box-sizing: border-box;
+
 }
 .footer-col a {
   display: inline-block;
@@ -1217,6 +1219,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
