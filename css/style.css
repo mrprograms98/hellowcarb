@@ -603,7 +603,12 @@ section ul li::before {
 }
 
 /* ===== Socials ===== */
-
+/* Maak alle afbeeldingen in de basic section responsief */
+.basic-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 #socials ul {
   display: flex;
   justify-content: center;
@@ -1210,4 +1215,5 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
