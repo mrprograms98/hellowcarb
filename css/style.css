@@ -292,7 +292,7 @@ li {
   opacity: 1;
   transform: translateY(0);
 }
-
+/*
 .float-shape {
   position: absolute;
   width: clamp(100px, 18vw, 180px);
@@ -320,7 +320,7 @@ li {
   50% { transform: translateY(-40px); }
   100% { transform: translateY(0); }
 }
-
+*/
 
 main {
   display: flex;
@@ -1232,4 +1232,5 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
