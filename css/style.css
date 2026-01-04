@@ -310,10 +310,10 @@ li {
   overflow: hidden;
 }
 
-.float-1 { top: 8%; left: 60px; }
-.float-2 { bottom: 12%; right: 60px; animation-delay: 3s; }
-.float-3 { top: 45%; right: 80px; animation-delay: 6s; }
-.float-4 { bottom: 35%; left: 70px; animation-delay: 9s; }
+.float-1 { top: 8%; left: 0; }
+.float-2 { bottom: 12%; right: 0; }
+.float-3 { top: 45%; right: 0; }
+.float-4 { bottom: 35%; left: 0; }
 
 @keyframes float {
   0% { transform: translateY(0); }
@@ -1231,6 +1231,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
