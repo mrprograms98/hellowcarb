@@ -1048,7 +1048,7 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
 
 .hero-wrapper {
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
   background-image: url("https://www.consultancy.nl/illustrations/news/detail/2023-04-05-023937472-Afschaffen_btw_op_groente_en_fruit_om_meerdere_redenen_niet_haalbaar.jpg"); /* jouw afbeelding */
   background-size: cover;
   background-position: center;
@@ -1231,9 +1231,3 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
-
-
-
-
-
-
