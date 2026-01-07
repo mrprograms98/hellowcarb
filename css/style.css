@@ -596,7 +596,7 @@ section ul li::before {
 .basic-section {
   background: black;
   border-left: 8px solid var(--apple-green);
-  color: white;
+  color: var(--apple-green);
   text-align: center;
 }
 
@@ -1137,6 +1137,7 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
   text-align: center;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
+  color: var(--apple-green);
 }
 
 .fact-section h2 {
@@ -1176,7 +1177,7 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
 }
 .fact-section p {
   font-size: 1.05rem;
-  color: #555;
+  color: var(--apple-green);
 }
 @keyframes sectionIn {
   from {
@@ -1231,3 +1232,4 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
