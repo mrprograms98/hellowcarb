@@ -882,6 +882,16 @@ list-style: none !important;
   opacity: 1;
   text-decoration: underline;
 }
+/* Puntjes uit footer-lijsten verwijderen */
+.footer-col ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  list-style: none;
+}
 
 /* Onderste balk */
 .footer-bottom {
@@ -1235,6 +1245,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
