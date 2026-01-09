@@ -723,6 +723,7 @@ footer p {
   font-size: 0.95rem;
   text-align: center;
   text-decoration: none;
+  color: var(--apple-green);
 }
 
 /* ===== Responsive aanpassingen ===== */
@@ -1233,6 +1234,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
