@@ -199,7 +199,7 @@ li {
 .nav-menu.active {
   display: block !important;
 }
-.ticket-koop {
+.ticket-koop a{
   border: none;
   color: white;
   padding: 15px 32px;
@@ -212,7 +212,7 @@ li {
   animation: softPulse 3.5s infinite;
 }
 
-.ticket-koop:hover {
+.ticket-koop a:hover {
   color: black;
 }
 
@@ -1245,6 +1245,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
