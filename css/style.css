@@ -212,6 +212,10 @@ li {
   animation: softPulse 3.5s infinite;
 }
 
+.ticket-koop:hover {
+  color: black;
+}
+
 @keyframes softPulse {
   0% { box-shadow: 0 0 0 0 rgba(140,198,63,0.5); }
   70% { box-shadow: 0 0 0 18px rgba(140,198,63,0); }
@@ -1229,6 +1233,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
