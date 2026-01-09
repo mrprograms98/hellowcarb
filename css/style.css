@@ -704,7 +704,7 @@ section ul li::before {
     #000,
     #111
   );
-  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+  box-shadow: 0 4px 8px 0 white;
 }
 
 /* Facebook iets rustiger blauw */
@@ -1245,6 +1245,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
