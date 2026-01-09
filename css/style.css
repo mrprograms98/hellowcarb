@@ -1115,6 +1115,7 @@ border-radius:50%;display:grid;place-items:center;color:#fff;cursor:pointer;z-in
   font-size: 0.95rem;
   opacity: 0.85;
   letter-spacing: 0.5px;
+  color: var(--apple-green);
 }
 
 .arrow {
@@ -1234,6 +1235,7 @@ section ul li::after {
 .section ul li::before {
   display: none !important;
 }
+
 
 
 
